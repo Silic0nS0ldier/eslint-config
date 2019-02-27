@@ -1,0 +1,9 @@
+{
+    "name": "@silicon/eslint-config",
+    "devDependencies": {
+        "@types/eslint": "^4.16.6"
+    },
+    "peerDependencies": {
+        "eslint": "^5.14.1"
+    }
+}
