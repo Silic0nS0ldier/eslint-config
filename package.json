@@ -1,5 +1,7 @@
 {
     "name": "@silicon-soldier/eslint-config",
+    "version": "0.1.0",
+    "license": "MIT",
     "main": "./dist/ruleset.cjs.js",
     "module": "./dist/ruleset.js",
     "devDependencies": {
