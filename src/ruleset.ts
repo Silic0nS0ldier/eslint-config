@@ -253,11 +253,7 @@ const config: Linter.Config = {
         ],
         "padded-blocks": [
             "error",
-            {
-                blocks: "never",
-                classes: "always",
-                switches: "never"
-            },
+            "never",
             {
                 allowSingleLineBlocks: false
             }
@@ -315,7 +311,7 @@ const config: Linter.Config = {
             {
                 anonymous: "always",
                 named: "never",
-                asyncArrow: "always"
+                asyncArrow: "never"
             }
         ],
         "space-in-parens": [

@@ -1,6 +1,7 @@
 {
-    "extends": "./dist/eslint.c.js",
+    "extends": "./dist/ruleset.cjs.js",
     "parserOptions": {
-        "ecmaVersion": 2015
+        "ecmaVersion": 2015,
+        "sourceType": "module"
     }
 }

@@ -9,7 +9,7 @@ A quick note, this ruleset is incapable of installing its own plugins due to [li
 ### 1. Install
 
 ```sh
-npm i --save-dev @silicon/eslint-config
+npm i --save-dev @silicon-soldier/eslint-config
 ```
 
 ### 2. Configure
@@ -18,7 +18,7 @@ Create an ESLint config file called `.eslintrc.json` (or whichever extension you
 
 ```json
 {
-    "extends": "./dist/eslint.c.js",
+    "extends": "@silicon-soldier/eslint-config",
     "parserOptions": {
         "ecmaVersion": 2015
     }
@@ -51,3 +51,4 @@ This roadmap will eventually be relocated to the wiki.
 ### 2.0.0
 
 - [ ] Prefer JSX syntax for XML derivatives when detected in a string.
+- [ ] JSDoc enforcement.

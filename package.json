@@ -1,5 +1,7 @@
 {
-    "name": "@silicon/eslint-config",
+    "name": "@silicon-soldier/eslint-config",
+    "main": "./dist/ruleset.cjs.js",
+    "module": "./dist/ruleset.js",
     "devDependencies": {
         "@types/eslint": "^4.16.6",
         "@types/node": "^11.11.0",

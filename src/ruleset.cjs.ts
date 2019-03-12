@@ -2,4 +2,4 @@
 require = require("esm")(module, {
     cache: false
 })
-module.exports = require("./eslint.js").default;
+module.exports = require("./ruleset.js").default;
