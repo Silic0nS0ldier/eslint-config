@@ -1,0 +1,6 @@
+{
+    "extends": "./dist/eslint.c.js",
+    "parserOptions": {
+        "ecmaVersion": 2015
+    }
+}

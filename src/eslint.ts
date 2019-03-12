@@ -13,7 +13,7 @@ const config: Linter.Config = {
                 arraysInArrays: false
             }
         ],
-        "array-element-new-line": [
+        "array-element-newline": [
             "error",
             "consistent"
         ],
@@ -36,7 +36,7 @@ const config: Linter.Config = {
             "error",
             "allman"
         ],
-        camelCase: [
+        camelcase: [
             "error"
         ],
         "comma-dangle": [
@@ -45,7 +45,7 @@ const config: Linter.Config = {
         ],
         "comma-spacing": "error",
         "comma-style": "error",
-        "computed-array-property-spacing": "error",
+        "computed-property-spacing": "error",
         "consistent-this": [
             "error",
             "that"
@@ -155,7 +155,7 @@ const config: Linter.Config = {
         ],
         "new-parens": "error",
         "newline-per-chained-call": "error",
-        "no-array-constructors": "error",
+        "no-array-constructor": "error",
         // 99% of the time, it'll be a mistake.
         // Override at location to indicate deliberate use.
         "no-bitwise": "error",
@@ -178,6 +178,7 @@ const config: Linter.Config = {
         ],
         "no-extra-parens": [
             "error",
+            "all",
             {
                 nestedBinaryExpressions: false
             }
