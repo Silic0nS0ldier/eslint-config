@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- Dog-feeding config against itself.
+
+### Removed
+
+- TypeScript to facilitate more effective dog-fooding.
+
 ## [0.1.0] - 2019-03-12
 
 Initial developmental release.

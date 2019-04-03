@@ -43,7 +43,7 @@ This roadmap will eventually be relocated to the wiki.
 
 ### 1.0.0
 
-- [ ] Improve dog-fooding experience.
+- [x] Improve dog-fooding experience.
 - [ ] Improve ruleset tests with pass and fail scenarios to permit catching of regressions and breaks from existing style.
 - [ ] Document code style.
 - [ ] Implement CI.
