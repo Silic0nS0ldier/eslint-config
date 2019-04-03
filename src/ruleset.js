@@ -1,5 +1,5 @@
 /* eslint-disable id-length */
-const config = {
+export default {
     rules: {
 
         /**
@@ -756,5 +756,3 @@ const config = {
         ],
     },
 };
-
-export default config;
