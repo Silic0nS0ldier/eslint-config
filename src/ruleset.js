@@ -655,9 +655,12 @@ export default {
         "semi-style": "error",
 
         /**
-         * Easier time inspecting imports.
+         * Easier time inspecting imports. Less wars over ordering.
          */
-        "sort-imports": "error",
+        "sort-imports": [
+            "error",
+            { ignoreCase: true, },
+        ],
 
         /**
          * @todo

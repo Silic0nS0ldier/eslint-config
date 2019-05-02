@@ -4,7 +4,12 @@ import {
 import {
     one, two,
 } from "./bfile2.js";
-import anotherVar from "./bfile1.js";
+import AnotherVar from "./bfile1.js";
+import Eslint from "eslint";
 import someVar from "./afile2.js";
+import ZOtherImport from "esm";
 
-console.log(short + medium + longVarName + someVar + anotherVar + one + two);
+console.log(
+    short + medium + longVarName + someVar + AnotherVar
+    + one + two + Eslint + ZOtherImport
+);
