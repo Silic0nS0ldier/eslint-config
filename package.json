@@ -14,6 +14,6 @@
         "esm": "^3.2.22"
     },
     "scripts": {
-        "test": "./node_modules/.bin/eslint ./tests/integration/ ./src/"
+        "test": "./node_modules/.bin/eslint ./tests/integration/**/*.js ./src/**/*.js"
     }
 }
