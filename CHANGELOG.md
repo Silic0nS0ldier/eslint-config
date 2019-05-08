@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.2.0]
+
+### Changed
+
+- Sorting of imports is now case insensitive.
+
 ## [0.1.2] - 2019-04-14
 
 ### Fixed
