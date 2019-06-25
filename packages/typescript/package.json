@@ -1,0 +1,32 @@
+{
+    "name": "@silicon-soldier/eslint-config-typescript",
+    "version": "0.1.1",
+    "license": "MIT",
+    "homepage": "https://github.com/silic0ns0ldier/eslint-config/blob/master/packages/eslint-config-typescript#readme",
+    "repository": "github:silic0ns0ldier/eslint-config",
+    "main": "./dist/ruleset.cjs.js",
+    "module": "./dist/ruleset.js",
+    "devDependencies": {
+        "@silicon-soldier/eslint-config": "^0.2.0",
+        "@types/eslint": "^4.16.6",
+        "@types/node": "^12.0.1",
+        "@typescript-eslint/eslint-plugin": "^1.9.0",
+        "@typescript-eslint/parser": "^1.9.0",
+        "eslint": "^5.16.0",
+        "typescript": "^3.4.5"
+    },
+    "peerDependencies": {
+        "eslint": "^5.16.0",
+        "@silicon-soldier/eslint-config": "^0.2.0",
+        "@typescript-eslint/eslint-plugin": "^1.9.0",
+        "@typescript-eslint/parser": "^1.9.0"
+    },
+    "dependencies": {
+        "esm": "^3.2.22"
+    },
+    "scripts": {
+        "build": "./node_modules/.bin/tsc",
+        "pretest": "npm run build",
+        "test": "./node_modules/.bin/eslint ./tests/integration/**/*.ts ./src/**/*.ts"
+    }
+}

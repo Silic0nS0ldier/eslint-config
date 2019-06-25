@@ -2,6 +2,8 @@
     "name": "@silicon-soldier/eslint-config",
     "version": "0.2.0",
     "license": "MIT",
+    "homepage": "https://github.com/silic0ns0ldier/eslint-config/blob/master/packages/eslint-config#readme",
+    "repository": "github:silic0ns0ldier/eslint-config",
     "main": "./src/ruleset.cjs.js",
     "module": "./src/ruleset.js",
     "devDependencies": {
