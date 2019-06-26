@@ -2,10 +2,6 @@
 
 This ESLint configuration targets plain JavaScript, and is intended to be complemented with additional rulesets for suit projects using TypeScript, React, unit tests, etc.
 
-## Usage
-
-A quick note, this ruleset is incapable of installing its own plugins due to [limitations](https://github.com/eslint/eslint/issues/3458) within current versions of ESLint. Any requirements will be marked as peer dependencies.
-
 ### 1. Install
 
 ```sh

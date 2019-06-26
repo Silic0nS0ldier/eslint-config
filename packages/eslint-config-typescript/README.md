@@ -2,10 +2,6 @@
 
 This ESLint configuration targets TypeScript, building on the baseline configuration `@silicon-soldier/eslint-config`.
 
-## Usage
-
-A quick note, this ruleset is incapable of installing its own plugins due to [limitations](https://github.com/eslint/eslint/issues/3458) within current versions of ESLint. This will be addressed by ESLint 6 which will be supported in the first stable release of this configuration. In the meantime, any requirements are marked as peer dependencies and will need to be installed separately.
-
 ### 1. Install
 
 ```sh

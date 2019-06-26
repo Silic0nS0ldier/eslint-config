@@ -4,7 +4,7 @@ This repository houses the baseline (plain JavaScript) `silicon-soldier` ESLint 
 
 ## Roadmap
 
-This roadmap will eventually be relocated to the wiki.
+This roadmap will eventually be relocated.
 
 ### 1.0.0
 

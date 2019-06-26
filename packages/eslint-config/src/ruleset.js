@@ -1,4 +1,3 @@
-/* eslint-disable id-length */
 export default {
     rules: {
 
@@ -11,7 +10,7 @@ export default {
         ],
 
         /**
-         * @todo
+         * Consistent, readable arrays.
          */
         "array-bracket-spacing": [
             "error",
@@ -45,7 +44,7 @@ export default {
         ],
 
         /**
-         * @todo
+         * Legible arrow functions.
          */
         "arrow-spacing": "error",
 
@@ -86,12 +85,13 @@ export default {
         "comma-spacing": "error",
 
         /**
-         * @todo
+         * Consistent and common.
          */
         "comma-style": "error",
 
         /**
-         * @todo
+         * Consistent computed property declarations and accesses.
+         * Unique vs. array declarations.
          */
         "computed-property-spacing": "error",
 
@@ -114,7 +114,7 @@ export default {
         "eol-last": "error",
 
         /**
-         * @todo
+         * Consistent function call spacing.
          */
         "func-call-spacing": "error",
 
@@ -127,7 +127,7 @@ export default {
         ],
 
         /**
-         * @todo
+         * Require functions to be defined with declarations.
          */
         "func-style": [
             "error",
@@ -161,12 +161,15 @@ export default {
          * smarter structuring of data.
          */
         "id-length": [
-            "error",
-            { max: 12, },
+            "warn",
+            {
+                max: 20,
+                properties: "never",
+            },
         ],
 
         /**
-         * @todo
+         * Concise, and generally more readable.
          */
         "implicit-arrow-linebreak": "error",
 
@@ -179,7 +182,7 @@ export default {
         ],
 
         /**
-         * Match XML markup and other code style.
+         * Match XML markup and similiar code.
          */
         "jsx-quotes": [
             "error",
@@ -187,7 +190,7 @@ export default {
         ],
 
         /**
-         * @todo
+         * Consistent array key spacing.
          */
         "key-spacing": "error",
 

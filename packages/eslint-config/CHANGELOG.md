@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+
+- Increased required ESLint version to `6.0.1`.
+- Relaxed identifier length requirement.
+  - Object properties are now ignored to permit an easier time using external libraries.
+  - Rule downgraded from error to warning.
+  - Identifier limit increased from 12 to 20.
+
 ## [0.2.0]
 
 ### Changed
