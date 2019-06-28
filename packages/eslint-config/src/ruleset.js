@@ -226,6 +226,10 @@ export default {
          * @todo
          */
         "lines-between-class-members": "error",
+
+        /**
+         * @todo
+         */
         "max-depth": [
             "error",
             { max: 6, },
@@ -296,6 +300,10 @@ export default {
          * @todo Need to check how this plays with function literals
          */
         "max-statements-per-line": "error",
+
+        /**
+         * @todo
+         */
         "multiline-comment-style": [
             "error",
 
@@ -540,7 +548,7 @@ export default {
         ],
 
         /**
-         *
+         * @todo
          */
         "one-var-declaration-per-line": [
             "error",
