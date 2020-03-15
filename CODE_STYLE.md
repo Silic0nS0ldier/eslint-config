@@ -32,23 +32,35 @@ Ever a point of debate, without a rule here git diffs can easily loose their cha
 
 ## Bracket Positioning
 
-**New line, unless a single line expression within recommended character range**
+**New line except when multi-line function arg declarations are used**
 
 ```js
 class BracketExample
 {
-    constructor(obj)
-    {
+    constructor(obj) {
         this.obj = obj;
         this.anotherObj = { simple: "string" };
+        this.yetAnotherObj = {
+            a: 'b',
+            c: 'd',
+        };
     }
 
-    echo()
-    {
+    echo() {
         console.log({
             ...this.obj,
             ...this.anotherObj,
         });
+    }
+
+    yell(
+        one,
+        two,
+        three,
+    ) {
+        console.log(one);
+        console.log(two);
+        console.log(three);
     }
 }
 ```
@@ -64,7 +76,12 @@ class BracketExample
 
 **USE THEM**
 
-Although JavaScript and its dervitives work perfectly fine without them, notable edge cases do exist (i.e. https://maurobringolf.ch/2017/06/automatic-semicolon-insertion-edge-cases-in-javascript/).
+Although JavaScript and its dervitives work perfectly fine without them, notable edge cases do exist (i.e. https://maurobringolf.ch/2017/06/automatic-semicolon-insertion-edge-cases-in-javascript/) due to Automatic Semicolon Insertion (ASI) not working out as expected.
+
+### Related ESLint Rules
+
+* `semi`
+* `no-unreachable` (ASI quirks)
 
 ## Comparison Strictness
 
@@ -86,7 +103,10 @@ Using strict comparison operators ensures that whoever next reads the projects s
 
 ### Related ESLint Rules
 
-* ...
+* `no-extra-strict`
+* `no-compare-neg-zero`
+* `valid-typeof`
+* `no-eq-null`
 
 ## Commas
 
@@ -180,6 +200,25 @@ Multi-line commment syntax is required for JSDoc and in most other circumstances
 ### Related ESLint Rules
 
 * ...
+
+## Star Imports
+
+**Avoid them**
+
+Star, all or "namespace" imports make it significantly more difficult for programmers to reliably identify unused code and for tooling to shed unused code from bundles. While valid use cases exist, they should be used sparingly.
+
+Dynamic imports face the same sort of issues but have their risks offset inhernetly (they won't inflate the initial bundle size). Proper usage of dynamic imports is significantly dependent on architecture and the use case, and as such as wholy exempt from the current iteration of this code style. It is preferrable however that dynamic imports are avoided where possible for external code in favour of wrapping the import such that specific exports are included only.
+
+### Related ESLint Rules
+
+* ...
+
+## Odds and Ends
+
+* `no-self-compare` - Self-comparisons are redundant in most cases.
+* `no-extend-native` - Nigh impossible to work with, a source of bugs, a source of vulnerabilities.
+* `no-eval` - For it is evil.
+* `no-implicit-coercion` - Confusing to new programmers, can be misinterpreted by anyone resulting in accidental bugs.
 
 ***
 
