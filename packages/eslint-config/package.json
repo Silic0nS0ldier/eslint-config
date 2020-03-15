@@ -6,16 +6,21 @@
     "repository": "github:silic0ns0ldier/eslint-config",
     "main": "./src/ruleset.cjs.js",
     "module": "./src/ruleset.js",
-    "devDependencies": {
-        "eslint": "^6.0.1"
-    },
     "peerDependencies": {
-        "eslint": "^6.0.1"
+        "eslint": "^6.8.0"
     },
     "dependencies": {
         "esm": "^3.2.25"
     },
     "scripts": {
-        "test": "./node_modules/.bin/eslint ./tests/integration/**/*.js ./src/**/*.js"
+        "test": "./node_modules/.bin/ava ./tests/*.js"
+    },
+    "ava": {
+        "require": [
+            "esm"
+        ]
+    },
+    "devDependencies": {
+        "ava": "^3.5.0"
     }
 }
