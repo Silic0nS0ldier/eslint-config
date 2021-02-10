@@ -23,6 +23,6 @@
     "scripts": {
         "build": "tsc",
         "pretest": "pnpm run build",
-        "test": "ls ./node_modules/ && ./node_modules/.bin/eslint ./tests/integration/**/*.ts ./src/**/*.ts"
+        "test": "./node_modules/.bin/eslint ./tests/integration/**/*.ts ./src/**/*.ts"
     }
 }

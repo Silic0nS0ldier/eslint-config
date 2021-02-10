@@ -13,6 +13,6 @@
         "eslint": "^7.19.0"
     },
     "scripts": {
-        "test": "ls ./node_modules/ && ./node_modules/.bin/eslint -c ./.eslintrc.dogfood.json ./src/**/*.cjs && ./node_modules/.bin/eslint ./tests/integration/**/*.js"
+        "test": "./node_modules/.bin/eslint -c ./.eslintrc.dogfood.json ./src/**/*.cjs && ./node_modules/.bin/eslint ./tests/integration/**/*.js"
     }
 }
