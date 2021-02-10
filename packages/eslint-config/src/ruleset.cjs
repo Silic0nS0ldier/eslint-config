@@ -3,6 +3,15 @@ module.exports = {
 
         /**
          * Consistent and readable array usage.
+         * [array-bracket-newline](https://eslint.org/docs/rules/array-bracket-newline)
+         * @example
+         * // good
+         * [ 1, 2, 3 ];
+         * [
+         *     1,
+         *     2,
+         *     3,
+         * ]
          */
         "array-bracket-newline": [
             "error",
@@ -11,15 +20,41 @@ module.exports = {
 
         /**
          * Consistent, readable arrays.
+         * [array-bracket-spacing](https://eslint.org/docs/rules/array-bracket-spacing)
+         * @example
+         * // good
+         * [ 1 ];
+         * [ 1, 2 ];
+         * [[ 1, 2 ], [ 3, 4 ]];
+         * [{ foo: "bar" }];
+         * [
+         *     [ 1, 2 ],
+         *     { foo: "bar" },
+         *     3,
+         * ]
          */
         "array-bracket-spacing": [
             "error",
             "always",
-            { arraysInArrays: false, },
+            {
+                arraysInArrays: false,
+                objectsInArrays: false,
+            },
         ],
 
         /**
          * Consistent and readable array usage.
+         * [array-element-newline](https://eslint.org/docs/rules/array-element-newline)
+         * @example
+         * // good
+         * [ 1, 2, 3 ];
+         * [ 1 ];
+         * [
+         *     1,
+         *     2,
+         *     3,
+         *     4,
+         * ];
          */
         "array-element-newline": [
             "error",
@@ -27,37 +62,59 @@ module.exports = {
         ],
 
         /**
-         * Concise.
+         * Avoids confusion, constraints to scenarios where verbosity hurts legibility.
+         * [arrow-body-style](https://eslint.org/docs/rules/arrow-body-style)
+         * @example
+         * // good
+         * () => 0;
+         * () => ({ foo: 0 });
          */
         "arrow-body-style": [
             "error",
-            "as-needed",
+            "never",
         ],
 
         /**
-         * Concise.
+         * Reduces verbosity where arrow functions can be used.
+         * [arrow-parens](https://eslint.org/docs/rules/arrow-parens)
+         * @example
+         * // good
+         * a => a + b;
+         * (a, b) => a + b;
+         * (a, b) => ({ a, b });
          */
         "arrow-parens": [
             "error",
             "as-needed",
-            { requireForBlockBody: true, },
         ],
 
         /**
          * Legible arrow functions.
+         * [arrow-spacing](https://eslint.org/docs/rules/arrow-spacing)
+         * @example
+         * // good
+         * a => a + b;
+         * (a, b) => ({ a, b });
          */
         "arrow-spacing": "error",
 
         /**
-         * Prevent unnecessary whitespace.
-         * Spacing is managed via a pre-comment empty line and bracket
-         * placement.
+         * Social distancing for our code, don't crowd the curely brackets.
+         * Also helps keep statements logically separated from their owning block, I guess.
+         * [block-spacing](https://eslint.org/docs/rules/block-spacing)
+         * @example
+         * // good
+         * { foo++; }
+         * {
+         *     bar--;
+         *     bar *= 10;
+         * }
          */
         "block-spacing": "error",
 
         /**
-         * Spaces out code in a reliable and readable fashion.
-         * Easier to locate blocks.
+         * Provides natural spacing that helps separate owning entity identification from its contained content.
+         * [brace-style](https://eslint.org/docs/rules/brace-style)
          */
         "brace-style": [
             "error",
@@ -66,6 +123,7 @@ module.exports = {
 
         /**
          * Consistent variable structuring without sacrificing space.
+         * [](https://eslint.org/docs/rules/)
          */
         camelcase: [
             "error",
@@ -73,6 +131,7 @@ module.exports = {
 
         /**
          * Quicker source manipulations.
+         * [](https://eslint.org/docs/rules/)
          */
         "comma-dangle": [
             "error",
@@ -81,22 +140,26 @@ module.exports = {
 
         /**
          * Prevent clutter.
+         * [](https://eslint.org/docs/rules/)
          */
         "comma-spacing": "error",
 
         /**
          * Consistent and common.
+         * [](https://eslint.org/docs/rules/)
          */
         "comma-style": "error",
 
         /**
          * Consistent computed property declarations and accesses.
          * Unique vs. array declarations.
+         * [](https://eslint.org/docs/rules/)
          */
         "computed-property-spacing": "error",
 
         /**
          * Eliminate cognetive load associated with figuring out what `this` is.
+         * [](https://eslint.org/docs/rules/)
          */
         "consistent-this": [
             "error",
@@ -105,21 +168,25 @@ module.exports = {
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "constructor-super": "error",
 
         /**
          * Improve compatibilty across tools.
+         * [](https://eslint.org/docs/rules/)
          */
         "eol-last": "error",
 
         /**
          * Consistent function call spacing.
+         * [](https://eslint.org/docs/rules/)
          */
         "func-call-spacing": "error",
 
         /**
          * No redundant idenifiers.
+         * [](https://eslint.org/docs/rules/)
          */
         "func-names": [
             "error",
@@ -128,6 +195,7 @@ module.exports = {
 
         /**
          * Require functions to be defined with declarations.
+         * [](https://eslint.org/docs/rules/)
          */
         "func-style": [
             "error",
@@ -137,6 +205,7 @@ module.exports = {
 
         /**
          * Consistent function paramater placement.
+         * [](https://eslint.org/docs/rules/)
          */
         "function-paren-newline": [
             "error",
@@ -145,6 +214,7 @@ module.exports = {
 
         /**
          * Consistent generator functions.
+         * [](https://eslint.org/docs/rules/)
          */
         "generator-star-spacing": [
             "error",
@@ -159,6 +229,7 @@ module.exports = {
         /**
          * Keep identifiers short to reduce source verbosity and encourage
          * smarter structuring of data.
+         * [](https://eslint.org/docs/rules/)
          */
         "id-length": [
             "warn",
@@ -170,11 +241,13 @@ module.exports = {
 
         /**
          * Concise, and generally more readable.
+         * [](https://eslint.org/docs/rules/)
          */
         "implicit-arrow-linebreak": "error",
 
         /**
          * Consistent indentation across all editors.
+         * [](https://eslint.org/docs/rules/)
          */
         indent: [
             "error",
@@ -183,6 +256,7 @@ module.exports = {
 
         /**
          * Match XML markup and similiar code.
+         * [](https://eslint.org/docs/rules/)
          */
         "jsx-quotes": [
             "error",
@@ -191,26 +265,31 @@ module.exports = {
 
         /**
          * Consistent array key spacing.
+         * [](https://eslint.org/docs/rules/)
          */
         "key-spacing": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "keyword-spacing": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "line-comment-position": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "linebreak-style": "error",
 
         /**
          * Frame comments to make them easier to pick out.
+         * [](https://eslint.org/docs/rules/)
          */
         "lines-around-comment": [
             "error",
@@ -224,11 +303,13 @@ module.exports = {
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "lines-between-class-members": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "max-depth": [
             "error",
@@ -239,6 +320,7 @@ module.exports = {
          * Keep source concise, and prevent dependence on line wrapping.
          * Also permits a more pleasent experience reviewing code on various
          * devices.
+         * [](https://eslint.org/docs/rules/)
          */
         "max-len": [
             "error",
@@ -261,6 +343,7 @@ module.exports = {
          * Keep files at a maintainable size. Comments are ignored which
          * translates to significant room for well documented logic.
          * @todo Is syntax like a bracket included in the calculation?
+         * [](https://eslint.org/docs/rules/)
          */
         "max-lines": [
             "warn",
@@ -273,6 +356,7 @@ module.exports = {
 
         /**
          * Prevent large blocks of unreusable code from forming.
+         * [](https://eslint.org/docs/rules/)
          */
         "max-lines-per-function": [
             "warn",
@@ -284,6 +368,7 @@ module.exports = {
 
         /**
          * Keep program flow easily traceable.
+         * [](https://eslint.org/docs/rules/)
          */
         "max-nested-callbacks": [
             "error",
@@ -292,17 +377,20 @@ module.exports = {
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "max-params": "error",
 
         /**
          * Avoid high density complex code.
          * @todo Need to check how this plays with function literals
+         * [](https://eslint.org/docs/rules/)
          */
         "max-statements-per-line": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "multiline-comment-style": [
             "error",
@@ -315,6 +403,7 @@ module.exports = {
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "new-cap": [
             "error",
@@ -323,32 +412,38 @@ module.exports = {
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "new-parens": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "newline-per-chained-call": "error",
 
         /**
          * Consistent array declarations.
+         * [](https://eslint.org/docs/rules/)
          */
         "no-array-constructor": "error",
 
         /**
          * Avoid hard to understand JS bitwise logic. Usage is usually by
          * mistake, overrides should be used if use is deliberate.
+         * [](https://eslint.org/docs/rules/)
          */
         "no-bitwise": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "no-class-assign": "error",
 
         /**
          * @todo Makes control flow MUCH harder to follow
+         * [](https://eslint.org/docs/rules/)
          */
         "no-confusing-arrow": [
             "error",
@@ -357,22 +452,26 @@ module.exports = {
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "no-const-assign": "error",
 
         /**
          * Continue statements interrupt normal flow and as loop blocks are not
          * commonly trated as function blocks, bad states may be created.
+         * [](https://eslint.org/docs/rules/)
          */
         "no-continue": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "no-dupe-class-members": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "no-duplicate-imports": [
             "error",
@@ -381,6 +480,7 @@ module.exports = {
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "no-extra-parens": [
             "error",
@@ -390,16 +490,19 @@ module.exports = {
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "no-inline-comments": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "no-lonely-if": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "no-mixed-operators": [
             "error",
@@ -408,36 +511,43 @@ module.exports = {
 
         /**
          * Force consistent indentation means.
+         * [](https://eslint.org/docs/rules/)
          */
         "no-mixed-spaces-and-tabs": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "no-multi-assign": "error",
 
         /**
          * Prevent excess useless whitespace.
+         * [](https://eslint.org/docs/rules/)
          */
         "no-multiple-empty-lines": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "no-nested-ternary": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "no-new-object": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "no-new-symbol": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "no-restricted-syntax": [
             "error",
@@ -446,61 +556,73 @@ module.exports = {
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "no-tabs": "error",
 
         /**
          * Prevent usage of class resources before parent has been constructed.
+         * [](https://eslint.org/docs/rules/)
          */
         "no-this-before-super": "error",
 
         /**
          * Prevent garbage whitespace at the end of lines.
+         * [](https://eslint.org/docs/rules/)
          */
         "no-trailing-spaces": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "no-underscore-dangle": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "no-unneeded-ternary": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "no-useless-computed-key": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "no-useless-constructor": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "no-useless-rename": "error",
 
         /**
          * Prevent usage of loosly scoped `var`.
+         * [](https://eslint.org/docs/rules/)
          */
         "no-var": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "no-whitespace-before-property": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "nonblock-statement-body-position": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "object-curly-newline": [
             "error",
@@ -512,6 +634,7 @@ module.exports = {
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "object-curly-spacing": [
             "error",
@@ -520,6 +643,7 @@ module.exports = {
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "object-property-newline": [
             "error",
@@ -528,6 +652,7 @@ module.exports = {
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "object-shorthand": [
             "error",
@@ -541,6 +666,7 @@ module.exports = {
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "one-var": [
             "error",
@@ -549,6 +675,7 @@ module.exports = {
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "one-var-declaration-per-line": [
             "error",
@@ -557,11 +684,13 @@ module.exports = {
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "operator-assignment": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "operator-linebreak": [
             "error",
@@ -570,6 +699,7 @@ module.exports = {
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "padded-blocks": [
             "error",
@@ -579,6 +709,7 @@ module.exports = {
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "prefer-arrow-callback": [
             "error",
@@ -590,37 +721,44 @@ module.exports = {
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "prefer-const": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "prefer-numeric-literals": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "prefer-object-spread": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "prefer-rest-params": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "prefer-spread": "error",
 
         /**
          * Template strings are easier to read compared to a lengthy
          * concatenation sequence.
+         * [](https://eslint.org/docs/rules/)
          */
         "prefer-template": "error",
 
         /**
          * @todo This should be a JSX specific rule.
+         * [](https://eslint.org/docs/rules/)
          */
         "quote-props": [
             "error",
@@ -634,6 +772,7 @@ module.exports = {
          *
          * Beyond that, this is consistent with strictly typed languages like
          * C#.
+         * [](https://eslint.org/docs/rules/)
          */
         quotes: [
             "error",
@@ -646,17 +785,20 @@ module.exports = {
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "require-yield": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "rest-spread-spacing": "error",
 
         /**
          * Prevent dependence on poorly understood and easily misused magic
          * statement termination.
+         * [](https://eslint.org/docs/rules/)
          */
         semi: "error",
 
@@ -667,6 +809,7 @@ module.exports = {
 
         /**
          * Easier time inspecting imports. Less wars over ordering.
+         * [](https://eslint.org/docs/rules/)
          */
         "sort-imports": [
             "error",
@@ -675,6 +818,7 @@ module.exports = {
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "sort-keys": [
             "error",
@@ -687,11 +831,13 @@ module.exports = {
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "space-before-blocks": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "space-before-function-paren": [
             "error",
@@ -704,6 +850,7 @@ module.exports = {
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "space-in-parens": [
             "error",
@@ -712,16 +859,19 @@ module.exports = {
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "space-infix-ops": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "space-unary-ops": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "spaced-comment": [
             "error",
@@ -735,16 +885,19 @@ module.exports = {
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "switch-colon-spacing": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "symbol-description": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "template-curly-spacing": [
             "error",
@@ -753,16 +906,19 @@ module.exports = {
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "template-tag-spacing": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "unicode-bom": "error",
 
         /**
          * @todo
+         * [](https://eslint.org/docs/rules/)
          */
         "yield-star-spacing": [
             "error",

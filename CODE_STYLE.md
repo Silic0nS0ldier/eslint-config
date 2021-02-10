@@ -1,5 +1,11 @@
 # Code Style
 
+Consistent code style should make the actual logic the focus (we humans recognise patterns automatically, making pattern breaks stand out and break focus) and discourage confusing (and lesser known/poorly understood) syntax. Readability is a requirement, and one that is difficult to codify as what consistues readable varies depending on an individuals level of experience.
+
+This code style is one attempt among many. A ~holy gospel~ set of laws that outline how JavaScript code (and supported derivatives) should be styled.
+
+* [TypeScript Extension](./CODE_STYLE_EXT_TYPESCRIPT.md)
+
 ## Indentation
 
 **4 spaces**
@@ -22,7 +28,7 @@ Ever a point of debate, without a rule here git diffs can easily loose their cha
 
 * Aligns with many of the projects I (@Silic0nS0ldier) was working with when setting out to create this ruleset.
 * Indentation is stable across even the most primitive of editors.
-* Though tabs are historically customisable regarding indentation, their is no reason such logic cannot be extended to space based indentation (e.g. https://github.com/kylepaulsen/vscode-stretchy-spaces).
+* Tabs are often cited for accessibility (resizable), I'm of the mind that tooling needs to mature to handle indentation in general. The technology exists (e.g. https://github.com/kylepaulsen/vscode-stretchy-spaces).
 
 ### Related ESLint Rules
 
