@@ -4,18 +4,15 @@
     "license": "MIT",
     "homepage": "https://github.com/silic0ns0ldier/eslint-config/blob/master/packages/eslint-config#readme",
     "repository": "github:silic0ns0ldier/eslint-config",
-    "main": "./src/ruleset.cjs.js",
-    "module": "./src/ruleset.js",
+    "type": "commonjs",
+    "main": "./src/ruleset.cjs",
     "devDependencies": {
-        "eslint": "^6.0.1"
+        "eslint": "^7.19.0"
     },
     "peerDependencies": {
-        "eslint": "^6.0.1"
-    },
-    "dependencies": {
-        "esm": "^3.2.25"
+        "eslint": "^7.19.0"
     },
     "scripts": {
-        "test": "./node_modules/.bin/eslint ./tests/integration/**/*.js ./src/**/*.js"
+        "test": "eslint -c ./.eslintrc.dogfood.json ./src/**/*.cjs && eslint ./tests/integration/**/*.js"
     }
 }

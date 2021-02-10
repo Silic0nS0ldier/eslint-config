@@ -1,5 +1,5 @@
 {
-    "extends": "./dist/ruleset.cjs.js",
+    "extends": "./dist/ruleset.js",
     "parserOptions": {
         "ecmaVersion": 2015,
         "sourceType": "module"

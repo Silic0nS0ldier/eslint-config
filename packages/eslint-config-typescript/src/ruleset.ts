@@ -1,9 +1,9 @@
-import { Linter, } from "eslint";
+import eslint = require("eslint");
 
-const config: Linter.Config & { extends: string[], plugins: string[] } = {
+const config: eslint.Linter.Config & { extends: string[], plugins: string[] } = {
     extends: [ "@silicon-soldier/eslint-config", ],
     parser: "@typescript-eslint/parser",
     plugins: [ "@typescript-eslint/eslint-plugin", ],
 };
 
-export default config;
+module.exports = config;
