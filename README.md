@@ -9,7 +9,8 @@ This roadmap will eventually be relocated.
 ### 1.0.0
 
 - [x] Improve dog-fooding experience.
-- [ ] Improve ruleset tests with pass and fail scenarios to permit catching of regressions and breaks from existing style.
+- [ ] Improve ruleset tests with pass and fail scenarios to permit catching of regressions and breaks from existing style.<br/>
+  Refer to https://www.npmjs.com/package/doctrine which opens up testing of config sample validation.
 - [ ] Document code style.
 - [ ] Implement CI.
 

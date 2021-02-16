@@ -114,7 +114,15 @@ module.exports = {
 
         /**
          * Provides natural spacing that helps separate owning entity identification from its contained content.
+         * Further this helps avoid scope misunderstandings by not relying in indentation as the only contextual hint.
          * [brace-style](https://eslint.org/docs/rules/brace-style)
+         * @example
+         * // good
+         * function foo()
+         * {
+         *     return "bar";
+         * }
+         * if (bar) foo();
          */
         "brace-style": [
             "error",
@@ -123,7 +131,7 @@ module.exports = {
 
         /**
          * Consistent variable structuring without sacrificing space.
-         * [](https://eslint.org/docs/rules/)
+         * [camelcase](https://eslint.org/docs/rules/camelcase)
          */
         camelcase: [
             "error",
@@ -335,7 +343,7 @@ module.exports = {
                  * Keep comments concise and readable, forming an "island"
                  * within the source via padding to better distinguish.
                  */
-                comments: 80,
+                comments: 120,
             },
         ],
 
