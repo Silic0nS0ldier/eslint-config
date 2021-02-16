@@ -5,7 +5,7 @@
     "homepage": "https://github.com/silic0ns0ldier/eslint-config/blob/master/packages/eslint-config#readme",
     "repository": "github:silic0ns0ldier/eslint-config",
     "type": "commonjs",
-    "main": "./src/ruleset.cjs",
+    "main": "./src/ruleset.js",
     "devDependencies": {
         "eslint": "^7.20.0"
     },
@@ -13,6 +13,11 @@
         "eslint": "^7.20.0"
     },
     "scripts": {
-        "test": "./node_modules/.bin/eslint -c ./.eslintrc.dogfood.json ./src/**/*.cjs && ./node_modules/.bin/eslint ./tests/integration/**/*.js"
+        "test": "pnpm run test:dogfood",
+        "test:dogfood": "eslint ./src/**/*.js",
+        "//1": "TODO Testing good and bad examples in ruleset declaration",
+        "test:docs:internal": "",
+        "//2": "TODO Testing examples in code style guide",
+        "test:docs:external": ""
     }
 }

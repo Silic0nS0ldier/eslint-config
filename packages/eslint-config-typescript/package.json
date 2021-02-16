@@ -23,6 +23,11 @@
     "scripts": {
         "build": "tsc",
         "pretest": "pnpm run build",
-        "test": "./node_modules/.bin/eslint ./tests/integration/**/*.ts ./src/**/*.ts"
+        "test": "pnpm run test:dogfood",
+        "test:dogfood": "eslint ./src/**/*.ts",
+        "//1": "TODO Testing good and bad examples in ruleset declaration",
+        "test:docs:internal": "",
+        "//2": "TODO Testing examples in code style guide",
+        "test:docs:external": ""
     }
 }

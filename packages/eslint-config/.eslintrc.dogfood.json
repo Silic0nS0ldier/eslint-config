@@ -1,7 +1,0 @@
-{
-    "extends": "./src/ruleset.cjs",
-    "parserOptions": {
-        "ecmaVersion": 2015,
-        "sourceType": "script"
-    }
-}

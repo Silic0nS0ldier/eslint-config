@@ -130,16 +130,20 @@ module.exports = {
         ],
 
         /**
-         * Consistent variable structuring without sacrificing space.
+         * Consistent variable structuring.
          * [camelcase](https://eslint.org/docs/rules/camelcase)
+         * @example
+         * // good
+         * const fooBar = "foo-bar";
+         * function barFoo() { }
          */
         camelcase: [
             "error",
         ],
 
         /**
-         * Quicker source manipulations.
-         * [](https://eslint.org/docs/rules/)
+         * Quicker source manipulations, cleaner diffs.
+         * [comma-dangle](https://eslint.org/docs/rules/comma-dangle)
          */
         "comma-dangle": [
             "error",

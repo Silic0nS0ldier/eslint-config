@@ -16,7 +16,8 @@ Create an ESLint config file called `.eslintrc.json` (or whichever extension you
 {
     "extends": "@silicon-soldier/eslint-config",
     "parserOptions": {
-        "ecmaVersion": 2015
+        "ecmaVersion": 2015,
+        "sourceType": "module"
     }
 }
 ```

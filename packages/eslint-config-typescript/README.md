@@ -8,8 +8,6 @@ This ESLint configuration targets TypeScript, building on the baseline configura
 npm i --save-dev @silicon-soldier/eslint-config-typescript
 ```
 
-This plugin requires ESLint 6. Note that `@typescript-eslint/parser` and `@typescript-eslint/eslint-plugin` will peer dependency warning for ESLint 5, this can be safely ignored as they are compatible with both versions. Offical support in those plugins will arrive in v2, which is currently held up by other planned breaking changes that are targetted for the same major version bump.
-
 ### 2. Configure
 
 Create an ESLint config file called `.eslintrc.json` (or whichever extension you need/prefer).
@@ -18,7 +16,8 @@ Create an ESLint config file called `.eslintrc.json` (or whichever extension you
 {
     "extends": "@silicon-soldier/eslint-config-typescript",
     "parserOptions": {
-        "ecmaVersion": 2015
+        "ecmaVersion": 2015,
+        "sourceType": "module"
     }
 }
 ```
